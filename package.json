@@ -6,9 +6,11 @@
   "scripts": {
     "test": "jest --config=jest.config.json",
     "serve": "live-server public/",
+    "start": "node server/server.js",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "author": "Resa Gary",
   "license": "ISC",
