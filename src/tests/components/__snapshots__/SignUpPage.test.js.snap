@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should correctly render LoginPage 1`] = `
+exports[`should correctly render SignUpPage 1`] = `
 <div
   className="box-layout"
 >
@@ -12,14 +12,24 @@ exports[`should correctly render LoginPage 1`] = `
     >
       Expensify
     </h1>
-    <p>
-      Keep track of your expenses
-    </p>
+    <h3
+      className="box-layout__subtitle"
+    >
+      Sign Up
+    </h3>
     <form
       className="form"
-      id="emailLogin"
+      id="signUpForm"
       onSubmit={[Function]}
     >
+      <input
+        autoFocus={true}
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Full Name"
+        type="text"
+        value=""
+      />
       <input
         autoFocus={true}
         className="text-input"
@@ -36,39 +46,28 @@ exports[`should correctly render LoginPage 1`] = `
         type="password"
         value=""
       />
+      <input
+        autoFocus={true}
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Confirm Password"
+        type="password"
+        value=""
+      />
       <div>
         <button
           className="button"
         >
-          Login
-        </button>
-      </div>
-      <div>
-        <button
-          className="button button-text button--link"
-        >
-          Forgot Password?
+          Sign Up
         </button>
       </div>
     </form>
-    <p>
-      or login with
-    </p>
-    <button
-      className="button-round"
-      id="googleLogin"
-      onClick={[Function]}
-    >
-      <img
-        src="https://img.icons8.com/color/48/000000/google-logo.png"
-      />
-    </button>
     <Link
       className="button button-text button--link"
       replace={false}
-      to="/sign-up"
+      to="/"
     >
-      Don't have an account? Sign Up
+      Already a user? Sign In
     </Link>
   </div>
 </div>

@@ -1,5 +1,5 @@
 .show-for-desktop {
-    @media (min-width: $desktop-breakpoint - 0.1rem) {
+    @media (max-width: $desktop-breakpoint - 0.01rem) {
         display: none;
     }
 }

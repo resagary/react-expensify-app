@@ -10,6 +10,23 @@
     text-decoration: none;
 }
 
+.button-round {
+    background: none;
+    border: 1px solid $light-gray;
+    border-radius: 50%;
+    padding: $m-size;
+}
+
+.button-text {
+    color: $gray;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button-text:hover {
+    color: $dark-gray;
+}
+
 .button--link {
     background: none;
 }
