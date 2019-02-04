@@ -42,3 +42,8 @@
     background: #990000;
     margin-bottom: 20px;
 }
+
+.button--remove {
+    @extend .button;
+    margin-right: 15px;
+}

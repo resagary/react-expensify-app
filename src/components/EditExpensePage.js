@@ -1,9 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Modal from 'react-modal';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
+    state = {
+        selectedOption: false
+    };
+
+    openModal = () => {
+        this.setState(() => ({ selectedOption: true }));
+    };
+
+    closeModal = () => {
+        this.setState(() => ({ selectedOption: false }));
+    };
+
     onRemove = () => {
         this.props.startRemoveExpense({ id: this.props.expense.id });
         this.props.history.push('/');
@@ -29,10 +42,23 @@ export class EditExpensePage extends React.Component {
                     />
                     <button
                       className="button button--secondary"
-                      onClick={this.onRemove}
+                      onClick={this.openModal}
                     > Remove
                     </button>
                 </div>
+                <Modal
+                  isOpen={this.state.selectedOption}
+                  onRequestClose={this.closeModal}
+                  contentLabel="Remove Expense"
+                  className="modal"
+                  closeTimeoutMS={200}
+                  appElement={document.getElementById('app')}
+                >
+                    <h3 className="modal__title">Remove Expense</h3>
+                    <p className="modal__body">Are you sure you want to remove {this.props.expense.description}?</p>
+                    <button className="button--remove" onClick={this.onRemove}>Yes</button>
+                    <button className="button button--secondary" onClick={this.closeModal}>No</button>
+                </Modal>
             </div>
         );
     }
