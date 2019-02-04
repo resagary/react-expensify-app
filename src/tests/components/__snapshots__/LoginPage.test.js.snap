@@ -44,11 +44,13 @@ exports[`should correctly render LoginPage 1`] = `
         </button>
       </div>
       <div>
-        <button
-          className="button button-text button--link"
+        <Link
+          className="button--forgotpw button--link"
+          replace={false}
+          to="/reset-pw"
         >
           Forgot Password?
-        </button>
+        </Link>
       </div>
     </form>
     <p>

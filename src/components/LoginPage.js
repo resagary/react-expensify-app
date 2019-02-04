@@ -71,7 +71,9 @@ export class LoginPage extends React.Component {
                             <button className="button">Login</button>
                         </div>
                         <div>
-                            <button className="button button-text button--link">Forgot Password?</button>
+                            <Link className="button--forgotpw button--link" to="/reset-pw">
+                              Forgot Password?
+                            </Link>
                         </div>
                     </form>
                     <p>or login with</p>

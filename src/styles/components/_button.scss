@@ -27,6 +27,13 @@
     color: $dark-gray;
 }
 
+.button--forgotpw {
+    @extend .button-text;
+    border: none;
+    font-size: $font-size-small;
+    font-weight: 300;
+}
+
 .button--link {
     background: none;
 }

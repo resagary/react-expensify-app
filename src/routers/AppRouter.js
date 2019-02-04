@@ -7,6 +7,7 @@ import EditExpensePage from '../components/EditExpensePage';
 import NotFoundPage from '../components/NotFoundPage';
 import LoginPage from '../components/LoginPage';
 import SignUpPage from '../components/SignUpPage';
+import ResetPasswordPage from '../components/ResetPasswordPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -18,6 +19,7 @@ const AppRouter = () => (
             <Switch>
                 <PublicRoute path="/" component={LoginPage} exact={true} />
                 <PublicRoute path="/sign-up" component={SignUpPage} />
+                <PublicRoute path="/reset-pw" component={ResetPasswordPage} />
                 <PrivateRoute path="/dashboard" component={ExpenseDashboardPage} />
                 <PrivateRoute path="/create" component={AddExpensePage} />
                 <PrivateRoute path="/edit/:id" component={EditExpensePage} />
